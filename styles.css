@@ -1,0 +1,17 @@
+:root{
+    --primary-color: #52032c;
+    --secondary-color: #c97b06;
+}
+
+nav{
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+footer{
+    background-color: var(--primary-color);
+    border-radius: 0 0 10px 10px;
+}
