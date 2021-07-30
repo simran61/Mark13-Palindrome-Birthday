@@ -13,22 +13,29 @@
 <body>
     <nav>
         <div class="brand"><a class="tag" href="/">SimranCodes</a></div>
-        <div><a href="https://github.com/simran61"><i class="fab fa-github"></i></a></div>
+        <div class="top_icon"><a href="https://github.com/simran61"><i class="fab fa-github"></i></a></div>
     </nav>
 
     <header>
         <div class="left">
-            <h1>Check out if your Birthdate is Palidrome.</h1>
+            <h1>Check out if your <span>Birthday</span> is <span>Palindrome</span>.</h1>
             <p>A palindrome is a word/number which reads the same backward as forward</p>
-            <button>Ley's Go</button>
+            <button class="btn">Let's Go</button>
         </div>
         <div class="right">
-            <img src="" alt="">
+            <img src="images/calenderImg.jpg" alt="">
         </div>
     </header>
 
     <main>
-
+        <h2>Enter your birthday and we will tell you if your birthdate is palindrome.</h2>
+        <div class="info">This app checks your birthdate in 4 formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy, m-dd-yyyy<br>e.g. if your birthdate is 01 Aug 1995, then app will check for 19950801, 01081995, 080195, 1081995</div>
+        <input type="date"><br>
+        <button class="btn" style="color: white; background-color: var(--primary-color);">Check</button>
+        <div class="timmer">
+            <img class="loading" src="images/timmer.gif" alt="">
+        </div>
+        <p class="result">Awww! Your birthdate is not palindrome. Nearest palindrome date is 2021-12-02 You missed it by 147 days.</p>
     </main>
 
     <footer>

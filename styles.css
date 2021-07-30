@@ -1,17 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Titillium+Web:wght@300;400;600;700&display=swap');
+
 :root{
-    --primary-color: #52032c;
-    --secondary-color: #c97b06;
+    --primary-color: #752140;
+    --secondary-color: #e6a605;
+    --border-color: #b04c71;
+}
+
+body{
+    margin: 1.5rem;
+    font-family: sans-serif;
 }
 
 nav{
-    background-color: var(--primary-color);
-    border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    border-radius: 10px 10px 0 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.top_icon{
+    border-left: 1px solid var(--border-color);
+    padding-left: 2rem;
+}
+
+.brand{
+    width: 80%;
+    padding-left: 1rem;
+}
+
+a{
+    text-decoration: none;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+    padding: 2rem 0 0 5rem;
+    color: white;
+    height: 85vh;
+}
+
+.left{
+    width: 45%;
+}
+
+img{
+    height: 400px;
+    margin-top: 50px;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: 1.3rem;
+}
+
+span{
+    color: var(--secondary-color);
+}
+
+.btn{
+    background-color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+main{
+    text-align: center;
+    padding: 3rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+h2{
+    font-size: 2rem;
+}
+
+input{
+    padding: 0.5rem 1rem;
+    max-width: 10rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 2rem;
+    margin: 1rem 0;
+}
+
+.info{
+    line-height: 1.5rem;
+}
+
+.loading{
+    width: 100px;
+    height: auto;
+    margin: 0;
+    display: none;
+}
+
+.result{
+    border: 2px solid var(--primary-color);
     padding: 1rem;
+    display: none;
+}
+
+li{
+    display: inline;
+    margin: 0 1rem;
+}
+
+ul{
+    margin-bottom: 0;
+    padding-inline-start: 0;
 }
 
 footer{
+    text-align: center;
+    padding: 0.5rem;
     background-color: var(--primary-color);
     border-radius: 0 0 10px 10px;
+}
+
+.footHeading{
+    margin-top: 0;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: white;
 }
