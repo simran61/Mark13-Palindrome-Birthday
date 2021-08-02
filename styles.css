@@ -105,12 +105,14 @@ input{
     height: auto;
     margin: 0;
     display: none;
+    /* visibility: hidden; */
 }
 
 .result{
     border: 2px solid var(--primary-color);
     padding: 1rem;
-    display: none;
+    /* display: none; */
+    visibility: hidden;
 }
 
 li{
