@@ -124,43 +124,43 @@ function dateCalulation(year, month, date) {
             var newb4 = monthPrecStr + "-" + datePrecStr + "-" + yearPrecStr.substring(2);
 
             if (checkPalindrome(newF1)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf1 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf1 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newB1)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb1 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb1 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newF2)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf2 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf2 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newB2)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb2 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb2 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newF3)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf3 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf3 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newB3)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb3 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb3 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newF4)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf4 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newf4 + ". You missed it by " + i + " days.";
                 break;
             }
             else if (checkPalindrome(newB4)) {
-                document.getElementById('after_submit').style.visibility = "visible";
-                document.getElementById('after_submit').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb4 + ". You missed it by " + i + " days.";
+                document.getElementById('result').style.display = "block";
+                document.getElementById('result').innerHTML = "Awww!! Your birthday is not palindrome in any format.Nearest palindrome is " + newb4 + ". You missed it by " + i + " days.";
                 break;
             }
         }
@@ -168,6 +168,10 @@ function dateCalulation(year, month, date) {
 }
 
 check.addEventListener('click', () => {
+
+    // document.getElementById('timmer').style.visibility="visible";
+    document.getElementById('timmer').style.display="block";
+
     var getDate = extractDate();
     var dateValue = getDate[0];
     var year = getDate[1];
@@ -180,12 +184,18 @@ check.addEventListener('click', () => {
     var format2 = getFormat[1];
     var format3 = getFormat[2];
     var format4 = getFormat[3];
-    if (checkPalindrome(format1) || checkPalindrome(format2) || checkPalindrome(format3) || checkPalindrome(format4)) {
-        console.log("Is A Palindrome")
-        document.getElementById('after_submit').style.visibility = "visible";
-        document.getElementById('after_submit').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome.";
-    }
-    else {
-        dateCalulation(year, month, date);
-    }
+
+    setTimeout(() => {
+        if (checkPalindrome(format1) || checkPalindrome(format2) || checkPalindrome(format3) || checkPalindrome(format4)) {
+            console.log("Is A Palindrome")
+            document.getElementById('result').style.visibility = "visible";
+            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome.";
+        }
+        else {
+            dateCalulation(year, month, date);
+        }
+        document.getElementById('timmer').style.display="none";
+        console.log('hey there...')
+    }, 3000);
+
 });

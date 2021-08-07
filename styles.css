@@ -50,7 +50,7 @@ header{
     width: 45%;
 }
 
-img{
+.calender{
     height: 400px;
     margin-top: 50px;
 }
@@ -100,19 +100,14 @@ input{
     line-height: 1.5rem;
 }
 
-.loading{
-    width: 100px;
-    height: auto;
-    margin: 0;
-    display: none;
-    /* visibility: hidden; */
+#timmer{
+   display: none;
 }
 
-.result{
+#result{
     border: 2px solid var(--primary-color);
     padding: 1rem;
-    /* display: none; */
-    visibility: hidden;
+    display: none;
 }
 
 li{

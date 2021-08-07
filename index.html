@@ -23,7 +23,7 @@
             <button class="btn">Let's Go</button>
         </div>
         <div class="right">
-            <img src="images/calenderImg.jpg" alt="">
+            <img class="calender" src="images/calenderImg.jpg" alt="">
         </div>
     </header>
     
@@ -32,11 +32,10 @@
         <div class="info">This app checks your birthdate in 4 formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy, m-dd-yyyy<br>e.g. if your birthdate is 01 Aug 1995, then app will check for 19950801, 01081995, 080195, 1081995</div>
         <input id="userInput" type="date"><br>
         <button class="btn check" style="color: white; background-color: var(--primary-color);">Check</button>
-        <div class="timmer">
-            <img class="loading" src="images/timmer.gif" alt="">
+        <div id="timmer">
+            <img width="100rem" class="loading" src="images/timmer.gif" alt="">
         </div>
-        <p class="result" id="after_submit"></p>
-     
+        <p id="result"></p>
     </main>
 
     <footer>
