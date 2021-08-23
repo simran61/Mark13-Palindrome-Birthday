@@ -185,10 +185,27 @@ check.addEventListener('click', () => {
     var format4 = getFormat[3];
 
     setTimeout(() => {
-        if (checkPalindrome(format1) || checkPalindrome(format2) || checkPalindrome(format3) || checkPalindrome(format4)) {
-            console.log("Is A Palindrome")
-            document.getElementById('result').style.visibility = "visible";
-            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome.";
+        // if (checkPalindrome(format1) || checkPalindrome(format2) || checkPalindrome(format3) || checkPalindrome(format4)) {
+        //     console.log("Is A Palindrome")
+        //     document.getElementById('result').style.display = "block";
+        //     document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome.";
+        // }
+
+        if (checkPalindrome(format1)) {
+            document.getElementById('result').style.display = "block";
+            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome in format (dd/mm/yyyy).";
+        }
+        else if(checkPalindrome(format2)) {
+            document.getElementById('result').style.display = "block";
+            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome in format (mm/dd/yyyy).";
+        }
+        else if(checkPalindrome(format3)) {
+            document.getElementById('result').style.display = "block";
+            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome in format (yyyy/mm/dd).";
+        }
+        else if(checkPalindrome(format4)) {
+            document.getElementById('result').style.display = "block";
+            document.getElementById('result').innerHTML = "Yay!! Your birthday " + dateValue + " is palindrome in format (mm/dd/yy).";
         }
         else {
             dateCalulation(year, month, date);
