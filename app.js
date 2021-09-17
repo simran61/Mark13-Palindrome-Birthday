@@ -169,6 +169,13 @@ function dateCalulation(year, month, date) {
 
 check.addEventListener('click', () => {
 
+    if (userInput.value === "") {
+        document.getElementById('result').style.display = "block";
+        document.getElementById('result').innerHTML = "Please enter your birth date!!";
+                
+    }
+    else {
+
     document.getElementById('timmer').style.display="block";
 
     var getDate = extractDate();
@@ -212,5 +219,7 @@ check.addEventListener('click', () => {
         }
         document.getElementById('timmer').style.display="none";
     }, 3000);
+
+}
 
 });
